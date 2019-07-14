@@ -45,10 +45,10 @@
     let direction = event.deltaY;
 
     if (scroll) {
-      if (direction > 0 && currentItemIndex <= itemsNumber) {
+      if (direction > 0 && currentItemIndex < itemsNumber) {
         currentItemIndex++;
         scroll = false;
-      } else if (direction < 0 && currentItemIndex > 0) {
+      } else if (direction < 0 && currentItemIndex !== 0) {
         currentItemIndex--;
         scroll = false;
       }
@@ -64,15 +64,15 @@
 
 })();
 
-var header = document.getElementById("menu");
-var btns = header.getElementsByClassName("menu_item_link");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
+//var header = document.getElementById("menu");
+//var btns = header.getElementsByClassName("menu_item_link");
+//for (var i = 0; i < btns.length; i++) {
+  //btns[i].addEventListener("click", function() {
+    //var current = document.getElementsByClassName("active");
+    //current[0].className = current[0].className.replace(" active", "");
+    //this.className += " active";
+  //});
+//}
 
 
 // Accardion

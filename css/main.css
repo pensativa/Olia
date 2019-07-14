@@ -108,7 +108,7 @@ body img {
 .menu_item_link:focus,
 .menu_item_link:active,
 .menu_item_link.active {
-  	color: red !important;
+  	color: #963272;
 }
 
 /*End menu*/
@@ -134,7 +134,7 @@ body img {
 .social-buttons_item:hover path,
 .social-buttons_item:focus path,
 .social-buttons_item:active path {
-	fill: red;
+	fill: #963272;
 }
 
 /*End social buttons*/
@@ -211,6 +211,7 @@ body img {
 	#services h2{
 		font-size: 5em;
 		padding-left: 20%;
+		margin-top: 145px;
 	}
 }
 
@@ -295,6 +296,35 @@ body img {
     background: #963272;
 }
 
+#gallery .owl-prev,
+#gallery .owl-next {
+	position: absolute;
+    top: 35%;
+    font-size: 84px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#gallery .owl-nav .owl-prev:focus,
+#gallery .owl-nav .owl-prev:focus,
+#gallery .owl-nav .owl-prev:active,
+#gallery .owl-nav .owl-next:focus,
+#gallery .owl-nav .owl-next:focus,
+#gallery .owl-nav .owl-next:active,
+#gallery .owl-theme .owl-nav [class*="owl-"]:hover {
+    background: transparent;
+    color: #963272;
+}
+
+
+#gallery .owl-prev {
+    left: 2%;
+}
+
+#gallery .owl-next {
+    right: 2%;
+}
+
 /*End gallery*/
 
 /*Contacts*/
@@ -302,11 +332,11 @@ body img {
 #contacts {
 	background: #eeece6 url("../img/contacts.jpg") no-repeat center /cover;
 	text-align: center;
-	padding: 5% 0;
 	font-size: 2em;
+	padding-top: 120px;
 }
 
-#contacts h4 {
+#contacts h2 {
 	font-size: 3em;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -330,6 +360,12 @@ body img {
 
 #contacts .social-buttons_item svg path {
 	fill: black;
+}
+
+#contacts .social-buttons_item svg path:hover,
+#contacts .social-buttons_item svg path:focus,
+#contacts .social-buttons_item svg path:active {
+	fill: #963272;
 }
 
 /*End contacts*/
