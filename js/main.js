@@ -1,5 +1,4 @@
-//Menu
-
+//Убирает якорь из url
 
 //Onepage scroll
 (function() {
@@ -46,10 +45,10 @@
     let direction = event.deltaY;
 
     if (scroll) {
-      if (direction > 0 && currentItemIndex < itemsNumber) {
+      if (direction > 0 && currentItemIndex <= itemsNumber) {
         currentItemIndex++;
         scroll = false;
-      } else if (direction < 0 && currentItemIndex !== 0) {
+      } else if (direction < 0 && currentItemIndex > 0) {
         currentItemIndex--;
         scroll = false;
       }
@@ -59,7 +58,7 @@
   });
 
   container.addEventListener('transitionend', () => {
-    setTimeout(() => scroll = true, 300);
+    setTimeout(() => scroll = true, 200);
     setLocation(currentItemIndex);
   });
 

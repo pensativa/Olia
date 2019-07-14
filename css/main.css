@@ -108,7 +108,7 @@ body img {
 .menu_item_link:focus,
 .menu_item_link:active,
 .menu_item_link.active {
-  	color: red;
+  	color: red !important;
 }
 
 /*End menu*/
