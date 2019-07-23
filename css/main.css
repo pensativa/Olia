@@ -35,6 +35,17 @@ body img {
 	height: auto;
 }
 
+body a {
+	color: #000000;
+	text-decoration: none;
+}
+
+body a:hover,
+body a:focus,
+body a:active {
+	color: #963272;
+}
+
 /*HEADEr*/
 .header {
 	background-color: rgba(0, 0, 0, 0.5);
@@ -165,19 +176,24 @@ body img {
 /*About*/
 
 #about {
-	background: pink url("../img/about.jpg") no-repeat center /cover;
-	text-align: center;
+	background: grey url("../img/IMG_2215.jpg") no-repeat top center /cover;
+	text-align: left;
+	padding-left: 15%;
 }
 
 #about h1 {
 	font-family: 'Lobster', cursive;
 	font-size: 4em;
 	padding-top: 25vh;
+	color: #eeece6;
+	text-shadow: 0 0 6px gold;
 }
 
 #about p {
 	font-size: 2em;
 	text-transform: uppercase;
+	color: #eeece6;
+	text-shadow: 0 0 5px black;
 }
 
 @media screen and (min-width: 500px) {
