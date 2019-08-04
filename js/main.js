@@ -1,7 +1,8 @@
 //Убирает якорь из url
 
 //Onepage scroll
-(function() {
+    
+(function(e) {
   const container = document.querySelector('.main_wrapper');
   const items = Array.from(container.querySelectorAll('.section'));
   let itemsNumber = items.length;
@@ -64,6 +65,7 @@
 
 })();
 
+
 //var header = document.getElementById("menu");
 //var btns = header.getElementsByClassName("menu_item_link");
 //for (var i = 0; i < btns.length; i++) {
@@ -74,62 +76,6 @@
   //});
 //}
 
-
-// Accardion
-$(function(){
-//обрабатывем кликк по блоку с классом trigger
-$('.trigger').on('click', function(e){
-    e.preventDefault();
-//получаем нужные нам данные
-        var $this = $(this),
-        //получаем всё блоки menu
-        container = $this.closest('.accordeon'),
-        //получаем li по которому кликнули
-        item = $this.closest('.item'),
-        //получаем все другие li
-        items = container.find('.item'),
-        //выбираем из li активный
-        activeItem = items.filter('.active'),
-        //выбираем из li по кторому кликнули блок контен
-        content = item.find('.content'),
-        //выбираем у li с классом active блок контент
-        activeContent = activeItem.find('.content');
-
-        //если нет li с классом active по которому кликнули
-        if (!item.hasClass('active')) {
-            //убираем класс active
-            items.removeClass('active');
-            //добавляем active кликнутому
-            item.addClass('active');
-            //у того у кого был active задаём ширину 0
-            activeContent.animate({
-                   'width' : '0px'
-            });
-            //кликнутому 530        
-            content.animate({
-                   'width' : '600px'
-            });
-        //иначе
-        } else {
-            item.removeClass('active');
-            content.animate({
-                   'width' : '0px'
-            });
-
-        }
-});
-
-// клик вне аккордеона
-$(document).on('click', function (e) {
-   var $this = $(e.target);
-   if (!$this.closest('.accordeon').length) {
-         $('.content').animate({
-               'width' : '0px'
-         });
-         $('.item').removeClass('active');
-   }
-});
-});
 
 //Slider
 $('.owl-carousel').owlCarousel({
@@ -156,9 +102,46 @@ $('.owl-carousel').owlCarousel({
         }
     }
 });
-$('.play').on('click',function(){
-    owl.trigger('play.owl.autoplay',[1000])
-})
-$('.stop').on('click',function(){
-    owl.trigger('stop.owl.autoplay')
-})
+
+//Reviews
+
+
+/* Индекс слайда по умолчанию */
+var slideIndex = 1;
+showSlides(slideIndex);
+
+/* Функция увеличивает индекс на 1, показывает следующй слайд*/
+function plusSlide() {
+    showSlides(slideIndex += 1);
+}
+
+/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
+function minusSlide() {
+    showSlides(slideIndex -= 1);  
+}
+
+/* Устанавливает текущий слайд */
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+/* Основная функция слайдера */
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("item");
+    var dots = document.getElementsByClassName("slider-dots_item");
+    if (n > slides.length) {
+      slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
