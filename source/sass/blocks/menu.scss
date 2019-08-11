@@ -1,0 +1,28 @@
+.menu {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.menu__item {
+    display: inline;
+    list-style: none;
+    margin: 5px 10px;
+}
+
+.menu__link {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: bold;
+    padding: 5px 10px;
+}
+
+.menu__link:hover,
+.menu__link:focus,
+.menu__link:active,
+.menu__link.active {
+    color: $accent-font;
+}

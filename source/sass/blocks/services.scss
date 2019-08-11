@@ -1,0 +1,52 @@
+#services {
+  background: #eeece6 url("../img/02.jpg") no-repeat top left /cover;
+  position: relative;
+}
+
+#services h2 {
+  font-size: 10vh;
+  text-shadow: 0 0 5px white;
+  text-transform: uppercase;
+}
+
+.services__wrapper {
+  position: absolute;
+  top: 120px;
+  right: 10%;
+  width: 50%;
+}
+
+.services__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.services__item {
+  width: 30%;
+  list-style: none;
+  text-align: center;
+  margin-top: 4vh;
+  padding: 10px;
+  color: #fff;
+}
+
+.services__item:hover,
+.services__item:focus,
+.services__item:active {
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.services__title {
+  font-size: 3vh;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.services__image {
+  height: 25vh;
+  width: auto;
+}

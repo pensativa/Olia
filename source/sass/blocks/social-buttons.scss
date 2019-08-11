@@ -1,0 +1,26 @@
+.social-buttons {
+  width: 120px;
+  align-items: middle;
+}
+
+@media screen and (min-width: 500px) {
+  .social-buttons {
+    width: 130px;
+  }
+}
+
+.social-buttons__item {
+  width: 30px;
+  height: auto;
+  list-style: none;
+}
+
+.social-buttons__item svg {
+  fill: #fff;
+}
+
+.social-buttons__item:hover svg,
+.social-buttons__item:focus svg,
+.social-buttons__item:active svg {
+  fill: #963272;
+}

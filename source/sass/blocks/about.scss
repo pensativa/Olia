@@ -1,0 +1,31 @@
+#about {
+  background: grey url("../img/05.jpg") no-repeat top right /cover;
+  text-align: left;
+  padding-left: 15%;
+}
+
+#about h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 4em;
+  padding-top: 25vh;
+  color: #e11a2d;
+  text-shadow: 0 0 6px #1e1d19;
+}
+
+#about p {
+  font-size: 2em;
+  text-transform: uppercase;
+  color: #0b0b0a;
+  text-shadow: 0 0 5px #686363;
+}
+
+@media screen and (min-width: 500px) {
+  #about h1 {
+    padding-top: 15%;
+    font-size: 7em;
+  }
+
+  #about p {
+    font-size: 3em;
+  }
+}

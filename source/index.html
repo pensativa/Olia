@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Ольга Фадеева | Ведущая на все случаи жизни</title>
+    <link href="css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="preload" href="fonts/Roboto.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Roboto-Bold.woff2" as="font" crossorigin="anonymous">
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.js" async=""></script>
+  </head>
+  <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg">
+    </div>
+    <header class="header">
+      <nav class="header__navigation">
+        <a href="/"><img class="header__logo" src="img/logo.png" alt="logo" width="80" height="80"></a>
+        <ul class="menu" id="menu">
+          <li class="menu__item"><a class="menu__link" href="#about">Обо мне</a></li>
+          <li class="menu__item"><a class="menu__link" href="#services">Услуги</a></li>
+          <li class="menu__item"><a class="menu__link" href="#gallery">Галерея</a></li>
+          <li class="menu__item"><a class="menu__link" href="#reviews">Отзывы</a></li>
+          <li class="menu__item"><a class="menu__link" href="#team">Моя команда</a></li>
+          <li class="menu__item"><a class="menu__link" href="#contacts">Контакты</a></li>
+        </ul>
+        <ul class="social-buttons">
+          <li class="social-buttons__item">
+            <a href="https://vk.com/fadeevaevent" target="_blank">
+              <svg width="24" height="24">
+                <use xlink:href="#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-buttons__item">
+            <a href="https://www.instagram.com/fadeeva_event" target="_blank">
+              <svg width="24" height="24">
+                <use xlink:href="#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-buttons__item">
+            <a href="https://ok.ru/olgafadeeva.art" target="_blank">
+              <svg width="24" height="24">
+                <use xlink:href="#icon-odnoklassniki"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="main_wrapper">
+        <section class="section" id="about">
+          <div class="section_title">
+            <h1>Ольга Фадеева</h1>
+            <p>Ведущая на все случаи жизни</p>
+          </div>
+        </section>
+        <section class="section" id="services">
+          <div class="services__wrapper">
+            <ul class="services__list">
+              <li class="services__item">
+                <img class="services__image" src="img/svadba.jpg" alt="Свадьбы">
+                <h3 class="services__title">Свадьбы</h3>
+                <div class="services__text"></div>
+              </li>
+              <li class="services__item">
+                <img class="services__image" src="img/detstvo.jpg" alt="Юбилеи и Дни Рождения">
+                <h3 class="services__title">Юбилеи и Дни Рождения</h3>
+                <div class="services__text"></div>
+              </li>
+              <li class="services__item">
+                <img class="services__image" src="img/korporativ.jpg" alt="Корпоративные праздники">
+                <h3 class="services__title">Корпоративные праздники</h3>
+                <div class="services__text"></div>
+              </li>
+              <li class="services__item">
+                <img class="services__image" src="img/vypusk.jpg" alt="Выпускные">
+                <h3 class="services__title">Выпускные</h3>
+                <div class="services__text"></div>
+              </li>
+              <li class="services__item">
+                <img class="services__image" src="img/reklama.jpg" alt="Рекламные акции">
+                <h3 class="services__title">Рекламные акции</h3>
+                <div class="services__text"></div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="section" id="gallery">
+          <div id="slider" class="slider__gallery owl-carousel owl-theme">
+            <img class="owl-lazy" data-src="img/1.jpg">
+            <img class="owl-lazy" data-src="img/2.jpg">
+            <img class="owl-lazy" data-src="img/3.jpg">
+            <img class="owl-lazy" data-src="img/4.jpg">
+            <img class="owl-lazy" data-src="img/5.jpg">
+            <img class="owl-lazy" data-src="img/6.jpg">
+          </div>
+        </section>
+        <section class="section" id="reviews">
+          <div id="reviews__slider" class="slider">
+            <div class="item reviews-item">
+              <img class="reviews__image" src="img/lico1.jpg" alt="">
+              <h3>Марья Ивановна</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labo</p>
+            </div>
+            <div class="item reviews-item">
+              <img class="reviews__image" src="img/lico2.jpg" alt="">
+              <h3>Иван Иванович</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labo</p>
+            </div>
+            <div class="item reviews-item">
+              <img class="reviews__image" src="img/lico1.jpg" alt="">
+              <h3>Дарья Иванова</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labo</p>
+            </div>
+            <a class="prev" onclick="minusSlide()">&#10094;</a>
+            <a class="next" onclick="plusSlide()">&#10095;</a>
+          </div>
+          <div class="slider-dots">
+            <span class="slider-dots_item" onclick="currentSlide(1)"></span>
+            <span class="slider-dots_item" onclick="currentSlide(2)"></span>
+            <span class="slider-dots_item" onclick="currentSlide(3)"></span>
+          </div>
+        </section>
+        <section class="section" id="team">
+          <div class="team__wrapper">
+            <ul class="team__list">
+              <li class="team__item">
+                <img class="team__image" src="img/lico1.jpg" alt="">
+                <h3 class="team__header">Дарья Иванова</h3>
+                <p class="team__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labo</p>
+              </li>
+              <li class="team__item">
+                <img class="team__image" src="img/lico1.jpg" alt="">
+                <h3 class="team__header">Дарья Иванова</h3>
+                <p class="team__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labo</p>
+              </li>
+              <li class="team__item">
+                <img class="team__image" src="img/lico1.jpg" alt="">
+                <h3 class="team__header">Дарья Иванова</h3>
+                <p class="team__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labo</p>
+              </li>
+              <li class="team__item">
+                <img class="team__image" src="img/lico1.jpg" alt="">
+                <h3 class="team__header">Дарья Иванова</h3>
+                <p class="team__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labo</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="section" id="contacts">
+          <div class="contacts_wrapper">
+            <h2>Контакты</h2>
+            <p>Ольга Фадеева</p>
+            <p><a href="tel:+79655155092">+7 (965) 515-50-92</a></p>
+            <p><a href="mailto: fadeeva_event@mail.ru">fadeeva_event@mail.ru</a></p>
+            <ul class="social-buttons">
+              <li class="social-buttons_item vk">
+                <a href="https://vk.com/fadeevaevent" target="_blank">
+                  <svg width="24" height="24">
+                    <use xlink:href="#icon-vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-buttons_item insta">
+                <a href="https://www.instagram.com/fadeeva_event" target="_blank">
+                  <svg width="24" height="24">
+                    <use xlink:href="#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-buttons_item ok">
+                <a href="https://ok.ru/olgafadeeva.art" target="_blank">
+                  <svg width="24" height="24">
+                    <use xlink:href="#icon-odnoklassniki"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
