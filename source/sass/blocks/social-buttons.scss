@@ -3,9 +3,9 @@
   align-items: middle;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 768px) {
   .social-buttons {
-    width: 130px;
+    width: 150px;
   }
 }
 
@@ -22,5 +22,21 @@
 .social-buttons__item:hover svg,
 .social-buttons__item:focus svg,
 .social-buttons__item:active svg {
+  fill: #963272;
+}
+
+#contacts .social-buttons {
+  margin: 10px auto;
+  width: 180px;
+}
+
+#contacts .social-buttons__item svg {
+  width: 30px;
+  height: 30px;
+}
+
+#contacts .social-buttons_item svg:hover,
+#contacts .social-buttons_item svg:focus,
+#contacts .social-buttons_item svg:active {
   fill: #963272;
 }

@@ -1,4 +1,22 @@
-//Убирает якорь из url
+//Меню
+var nav = document.querySelector('.header__navigation');
+nav.classList.remove('header__navigation--nojs');
+
+jQuery(function ($) {
+$(window).resize(function() {
+  if ($(window).width() > 768 ) {
+    $(function(){
+    $('.menu__item').on('click', function(){
+        $('.popap-menu').slideToggle(300, function(){
+            if($(this).css('visibility') === 'hidden'){
+                $(this).removeAttr('style');
+            }
+        });
+    });
+    });
+  }
+});
+});
 
 //Onepage scroll
 

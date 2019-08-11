@@ -1,12 +1,15 @@
 .header {
   background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100vw;
   max-width: 100%;
   padding: 20px;
   z-index: 101;
+
+  &--front {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 .header__navigation,
@@ -20,6 +23,10 @@
 .header__navigation {
   width: 80%;
   margin: 0 auto;
+
+  &--nojs .popap-menu {
+    visibility: visible;
+  }
 }
 
 @media screen and (min-width: 500px) {

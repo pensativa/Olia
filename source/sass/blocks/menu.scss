@@ -10,13 +10,17 @@
     display: inline;
     list-style: none;
     margin: 5px 10px;
+
+    &--open .popap-menu {
+      visibility: visible;
+    }
 }
 
 .menu__link {
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
-    font-size: bold;
+    font-weight: bold;
     padding: 5px 10px;
 }
 

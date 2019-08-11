@@ -6,26 +6,17 @@
 
 #about h1 {
   font-family: 'Lobster', cursive;
-  font-size: 4em;
-  padding-top: 25vh;
+  font-size: 7em;
+  padding-top: 15%;
   color: #e11a2d;
   text-shadow: 0 0 6px #1e1d19;
 }
 
 #about p {
-  font-size: 2em;
+  font-size: 3em;
   text-transform: uppercase;
   color: #0b0b0a;
   text-shadow: 0 0 5px #686363;
-}
-
-@media screen and (min-width: 500px) {
-  #about h1 {
-    padding-top: 15%;
-    font-size: 7em;
-  }
-
-  #about p {
-    font-size: 3em;
-  }
+  width: 50%;
+  text-align: center;
 }
