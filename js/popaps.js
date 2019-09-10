@@ -15,4 +15,4 @@ buttonAbout.addEventListener('click', function() {
   }
 });
 
-//Popaps dj
+//Popap mail
