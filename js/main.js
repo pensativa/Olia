@@ -24,71 +24,17 @@ navToggle.addEventListener('click', function() {
   }
 });
 
-//Slider
-$('.owl-carousel').owlCarousel({
-  items: 3,
-  lazyLoad: true,
-  loop: true,
-  margin: 10,
-  autoplay: true,
-  autoplayTimeout: 1500,
-  autoplayHoverPause: true,
-  responsive: {
-    0: {
-      items: 1,
-      nav: true
-    },
-    760: {
-      items: 2,
-      nav: false
-    },
-    1000: {
-      items: 3,
-      nav: true,
-      loop: false
+//to top
+
+$(function() {
+  $(window).scroll(function() {
+    if($(this).scrollTop() != 0) {
+      $('#to-top').fadeIn();
+    } else {
+      $('#to-top').fadeOut();
     }
-  }
+  });
+  $('#to-top').click(function() {
+    $('body, html').animate({scrollTop:0},800);
+  });
 });
-
-//Reviews
-
-
-/* Индекс слайда по умолчанию */
-var slideIndex = 1;
-showSlides(slideIndex);
-
-/* Функция увеличивает индекс на 1, показывает следующй слайд*/
-function plusSlide() {
-  showSlides(slideIndex += 1);
-}
-
-/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
-function minusSlide() {
-  showSlides(slideIndex -= 1);
-}
-
-/* Устанавливает текущий слайд */
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-/* Основная функция слайдера */
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("item");
-  var dots = document.getElementsByClassName("slider-dots_item");
-  if (n > slides.length) {
-    slideIndex = 1
-  }
-  if (n < 1) {
-    slideIndex = slides.length
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-}
