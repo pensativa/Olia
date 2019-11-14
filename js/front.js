@@ -81,32 +81,6 @@ for (var i = 0; i < btns.length; i++) {
 }
 
 
-//Slider
-$('.owl-carousel').owlCarousel({
-  items: 3,
-  lazyLoad: true,
-  loop: true,
-  margin: 10,
-  autoplay: true,
-  autoplayTimeout: 1500,
-  autoplayHoverPause: true,
-  responsive: {
-    0: {
-      items: 1,
-      nav: true
-    },
-    760: {
-      items: 1,
-      nav: false
-    },
-    1200: {
-      items: 2,
-      nav: true,
-      loop: false
-    }
-  }
-});
-
 //Reviews
 
 
@@ -144,3 +118,19 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
 }
+
+//Callback popap
+
+jQuery(function ($) {
+  $(function(){
+    $('.button--contacts').on('click', function(evet){
+      evet.preventDefault();
+      $('.callback--contacts').addClass('open');
+    });
+
+    $('.callback__clouse').on('click', function(evet){
+      evet.preventDefault();
+      $('.callback--contacts').removeClass('open');
+    });
+  });
+});
