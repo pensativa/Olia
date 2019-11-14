@@ -38,3 +38,25 @@ $(function() {
     $('body, html').animate({scrollTop:0},800);
   });
 });
+
+//Callback
+
+$(document).ready(function() {
+  $(function(){
+    $("#phone").mask("+7 (999) 999-99-99");
+  });
+
+  $("#form").submit(function() {
+    $.ajax({
+      type: "POST",
+      url: "mail.php",
+      data: $(this).serialize()
+    }).done(function() {
+      $(this).find("input").val("");
+      alert("Спасибо за заявку! Я скоро свяжусь с вами!");
+      $("#form").trigger("reset");
+    });
+    return false;
+  });
+
+});
