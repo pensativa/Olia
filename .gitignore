@@ -1,11 +1,16 @@
 .DS_Store
 .idea
 .vscode
+.editorconfig
+.gitattributes
+.stylelintrc
 *.ai
 *.log
 *.pdf
 *.psd
 *.sublime*
+*.js
+*.json
 source/
 node_modules/
 npm-debug.*
