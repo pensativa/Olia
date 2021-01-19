@@ -1,0 +1,56 @@
+.social-buttons {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.social-buttons__item {
+  width: 30%;
+  height: auto;
+  list-style: none;
+}
+
+.social-buttons__item svg {
+  fill: #fff;
+  max-width: 100%;
+}
+
+.social-buttons__item:hover svg,
+.social-buttons__item:focus svg,
+.social-buttons__item:active svg {
+  fill: $hover-color;
+  transition: 0.5s;
+}
+
+#contacts .social-buttons {
+  margin: 10px auto;
+  width: 180px;
+}
+
+#contacts .social-buttons__item svg {
+  width: 30px;
+  height: 30px;
+  fill: #000;
+}
+
+#contacts .social-buttons__item:hover svg,
+#contacts .social-buttons__item:focus svg,
+#contacts .social-buttons__item:active svg {
+  fill: #da1225;
+}
+
+@media (max-width: 992px) {
+  .social-buttons {
+    width: 120px;
+  }
+}
+
+@media (max-width: 700px) {
+  .social-buttons {
+    width: 100px;
+  }
+}

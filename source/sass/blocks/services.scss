@@ -1,0 +1,89 @@
+#services {
+  background: #eeece6 url("../img/02.jpg") no-repeat top left /cover;
+  position: relative;
+}
+
+#services h2 {
+  font-size: 5vw;
+  text-shadow: 0 0 5px white;
+  text-transform: uppercase;
+}
+
+.services__wrapper {
+  position: absolute;
+  top: 15vh;
+  right: 10%;
+  width: 36vw;
+  min-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services__list {
+  padding: 0;
+  position: relative;
+  margin: 0;
+  list-style: none;
+  width: 36vw;
+}
+
+.services__item {
+  border-radius: 20px;
+  padding-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.services__title {
+  font-size: 2em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 3px #000;
+
+  & a {
+    color: #fff;
+  }
+}
+
+.services__img {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  color: $hover-color;
+}
+
+@media (max-width: 1370px) {
+  .services__wrapper {
+    top: 25vh;
+  }
+}
+
+@media (max-width: 992px) {
+  #services {
+    background: $bg-mobile;
+  }
+
+  #team h2 {
+    font-size: 28px;
+    margin-bottom: 50px;
+  }
+
+  .services__wrapper {
+    position: static;
+    width: 90%;
+    max-width: 500px;
+    margin: 100px auto 50px;
+    min-width: 280px;
+  }
+
+  .services__title {
+    font-size: 24px;
+  }
+}

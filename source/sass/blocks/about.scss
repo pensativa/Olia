@@ -1,0 +1,246 @@
+.about {
+  background: #0d1313 url("../img/about-n.jpg") no-repeat top right /100% auto;
+  text-align: left;
+  position: relative;
+}
+
+.about__title {
+  position: absolute;
+  top: 20vh;
+  left: 25%;
+  margin-left: -22vw;
+}
+
+.about__header {
+  font-size: 10vw;
+  font-family: "Times New Roman";
+  text-transform: uppercase;
+  width: 58vw;
+
+  &--left {
+    color: #fff;
+    text-shadow: 0px 6px 7px rgba(251, 173, 3, 0.8);
+  }
+
+  &--right {
+    color: #fbad03;
+    padding-left: 15%;
+  }
+}
+
+.about__slogan {
+  font-size: 1.8vw;
+  color: #e8e9f0;
+  text-shadow: 0 0 5px #686363;
+  width: 21vw;
+  position: absolute;
+  top: 20%;
+  right: 1vw;
+  border-left: 3px solid;
+  padding: 5px 20px;
+  text-transform: uppercase;
+}
+
+.about__text {
+  position: fixed;
+  top: 130px;
+  left: 50%;
+  width: 90vw;
+  height: auto;
+  margin-left: -45vw;
+  background-color: rgba(#fff, 0.9);
+  padding: 11vh 20px 20px;
+  z-index: 101;
+  text-align: center;
+  box-shadow: 0 5px 10px 8px rgba(#000, 0.5);
+  display: none;
+  font-size: 18px;
+}
+
+.about__button {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  line-height: 1.2;
+  border-radius: 50%;
+  font-size: 20px;
+  color: rgba(#000, 0.5);
+  background-color: rgba(#fff, 0.3);
+  position: absolute;
+  top: 30%;
+  left: 30px;
+  text-align: center;
+  padding: 25px 0;
+
+  &:hover,
+  &:focus {
+    animation: shake 0.6s;
+    background-color: #fff;
+    color: $hover-color;
+  }
+
+  &--open {
+    width: 90vw;
+    position: fixed;
+    top: 130px;
+    padding: 20px;
+    left: 50%;
+    margin-left: -45vw;
+    font-size: 4vh;
+    z-index: 102;
+    padding: 18px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0;
+    height: 10vh;
+    color: #fff;
+
+
+    &:hover,
+    &:focus {
+      animation: none;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+    }
+
+    &::after {
+      content: "x";
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      margin-top: -10px;
+      display: inline-block;
+      font-size: 13px;
+      color: #000;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #000;
+      border-radius: 50%;
+      font-weight: bold;
+    }
+
+    &:hover::after,
+    &:focus::after,
+    &:active::after {
+      color: #fff;
+      background-color: #000;
+    }
+
+    & + .about__text {
+      display: block;
+    }
+  }
+
+  &--nojs {
+    cursor: default;
+
+    &:active + .about__text {
+      display: block;
+    }
+  }
+}
+
+.about__link {
+  text-align: right;
+  margin-top: -15px;
+  color: red;
+  font-weight: bold;
+  color: #2769cc;
+  display: inherit;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $hover-color;
+  }
+}
+
+.about__photo {
+  display: inline-block;
+  margin: 0 auto 30px;
+}
+
+@media (min-width: 992px) {
+  .about__photo {
+    float: left;
+    width: 30%;
+    margin: 0 30px 50px 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+      transform: scale(1.5);
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .about {
+    background-size: cover;
+  }
+}
+
+@media (max-width: 992px) {
+  .about {
+    height: 90vh;
+    background: url("../img/about-mobile.jpg") no-repeat top right /auto 100%;
+  }
+
+  .about__title {
+    margin-left: 0;
+    top: 20vh;
+    left: 5%;
+  }
+
+  .about__header {
+    font-size: 56px;
+    width: 56vw;
+  }
+
+  .about__slogan {
+    right: auto;
+    top: 6%;
+    font-size: 18px;
+    width: 240px;
+    left: 210px;
+  }
+
+  .about__button {
+    top: -85px;
+
+    &--open {
+      top: 10px;
+    }
+  }
+
+  .about__text {
+    font-size: 14px;
+    overflow-y: scroll;
+    top: 10px;
+
+    & p {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about__header {
+    width: 100%;
+    font-size: 42px;
+    position: static;
+
+    &--right {
+      display: block;
+      padding-left: 10%;
+    }
+  }
+
+  .about__slogan {
+    font-size: 20px;
+    width: 240px;
+    position: static;
+    border-left: none;
+    border-top: 3px solid;
+    padding: 20px 0;
+  }
+}

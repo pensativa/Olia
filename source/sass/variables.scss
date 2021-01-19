@@ -1,0 +1,25 @@
+/*Шрифты*/
+
+@font-face {
+  font-family: 'PTSans';
+  src: url("../fonts/PTSans-Regular.woff") format("woff"),
+    url("../fonts/PTSans-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PTSans';
+  src: url("../fonts/PTSans-Bold.woff") format("woff"),
+    url("../fonts/PTSans-Bold.woff2") format("woff2");
+  font-style: bold;
+  font-weight: bold;
+  font-display: swap;
+}
+
+/*Переменные*/
+$accent-font: 'Lobster', cursive;
+$hover-color: #fbad03;
+$bg-mobile: none;
+$bg-mobile-main: #000 url(../img/about-n.jpg) repeat 0 100%/cover;

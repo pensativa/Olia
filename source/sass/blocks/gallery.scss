@@ -1,0 +1,123 @@
+#gallery {
+  background: #eeece6 url("../img/03.jpg") no-repeat left center /cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.my-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.slider__gallery {
+  position: absolute;
+  top: 25vh;
+  left: 50%;
+  margin-left: -40vw;
+  bottom: auto;
+  width: 80vw !important;
+  max-height: 65vh;
+  overflow: hidden;
+
+  & img {
+    max-height: 65vh;
+    width: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .main #gallery {
+    background: $bg-mobile;
+    text-align: center;
+  }
+
+  .slider__gallery {
+    position: static !important;;
+    width: auto !important;
+    margin-left: 0;
+  }
+
+  .my-video {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+}
+
+/*Gallery page*/
+
+.other-page #gallery {
+  background: none;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.other-page #gallery:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.other-page .container {
+  width: 100%;
+  max-width: 960px;
+  margin: 50px auto;
+}
+
+.other-page .photo {
+  width: 33.333333%;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+
+  & img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    border: 10px solid #eee;
+  }
+}
+
+.other-page .photo a:hover {
+    opacity: 0.5;
+}
+
+.other-page .photo a {
+    display: block;
+}
+
+.other-page .photo a:after {
+    content: '';
+    background: transparent url("../img/eye-icon.png") no-repeat center;
+    width: 52px;
+    height: 35px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+.other-page .photo:hover > a:after {
+    visibility: visible;
+}
+
+.other-page .photo figcaption {
+    color: #999999;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 992px) {
+  .other-page .photo {
+    width: 50%;
+  }
+}

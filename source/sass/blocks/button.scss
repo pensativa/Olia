@@ -1,0 +1,107 @@
+.button {
+  display: inline-block;
+  position: relative;
+  padding: 10px 40px;
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  font-family: "Times New Roman";
+  transition: 0.5s;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $hover-color;
+    outline: none;
+    color: #000;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #000;
+    transition: 400ms ease all;
+  }
+
+  &::after{
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    width: 100%;
+    transition: 800ms ease all;
+  }
+
+  &:active {
+    box-shadow: 0 0 6px 3px inset rgba(#000, 0.4);
+    outline: none;
+  }
+
+  &--gallery {
+    position: absolute;
+    right: 10vw;
+    bottom: 3vh;
+  }
+
+  &--team {
+    background-color: #fd1926;
+    text-transform: uppercase;
+
+    &:before,
+    &:after {
+      background: #fff;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $hover-color;
+      color: #000;
+    }
+  }
+
+  &--submit {
+    margin: 0 auto;
+    border: none;
+  }
+
+  &--contacts {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 992px) {
+  .button {
+    &--gallery {
+      position: static;
+      margin: 30px auto;
+      text-align: center;
+
+      text-transform: uppercase;
+      font-weight: bold;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $hover-color;
+        color: #000;
+      }
+    }
+
+    &--team {
+      font-size: 16px;
+      text-align: center;
+      max-width: 280px;
+      background-color: #fff;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 5px 0;
+
+  & a {
+    color: #fff;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $hover-color;
+      transition: 0.5s ease-in;
+    }
+  }
+}
+
+.footer__wrapper {
+  max-width: 1300px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__title {
+  font-size: 16px;
+  text-align: center;
+  font-family: "Franklin Gothic Medium";
+
+  & a {
+    color: $hover-color;
+  }
+
+  & a b {
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+}
+
+@media (max-width: 1300px) {
+  .footer__wrapper {
+    padding: 0 20px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__wrapper {
+    justify-content: space-around;
+    font-size: 16px;
+    margin: 20px 0;
+
+    & > p,
+    & > ul {
+      margin: 10px;
+    }
+  }
+}
