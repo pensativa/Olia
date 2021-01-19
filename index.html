@@ -419,6 +419,17 @@
         <script src="js/main.js"></script>
         <script src="js/swiper.min.js"></script>
         <script src="js/swiper-slider.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+              slidesPerView: 1,
+              spaceBetween: 0,
+              loop: true,
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+            });
+        </script>
         <script src="js/front.js"></script>
         <script src="js/popaps.js"></script>
     </body>
