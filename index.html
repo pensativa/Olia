@@ -5,6 +5,7 @@
       <meta name="viewport" content="initial-scale=1,width=device-width,maximum-scale=1,minimum-scale=1,user-scalable=no">
       <title>Ольга Фадеева | ведущая, влюбленная в свою профессию</title>
       <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+      <link rel="stylesheet" href="css/swiper.min.css">
       <link href="css/style.min.css" rel="stylesheet" type="text/css">
       <link rel="preload" href="fonts/PTSans-Regular.woff2" as="font" crossorigin="anonymous">
       <link rel="preload" href="fonts/PTSans-Bold.woff2" as="font" crossorigin="anonymous">
@@ -27,10 +28,10 @@
       <noscript><div><img src="https://mc.yandex.ru/watch/56577436" style="position:absolute; left:-9999px;" alt=""></div></noscript>
       <!-- /Yandex.Metrika counter -->
     </head>
-    <body>
+    <body><!--
       <div class="preloader">
         <img class="preloader__img" src="img/logo.png" alt="logo" width="300" height="57">
-      </div>
+      </div>-->
         <div style="display:none">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <symbol id="icon-instagram" viewbox="0 0 24 24">
@@ -54,7 +55,7 @@
                     <input class="menu__checkbox" type="checkbox"> <span id="span1"></span> <span id="span2"></span> <span id="span3"></span>
                 </div>
                 <ul class="menu" id="menu">
-                    <li class="menu__item"><a class="menu__link" href="#about">Обо мне</a></li>
+                    <li class="menu__item"><a class="menu__link active" href="#about">Обо мне</a></li>
                     <li class="menu__item menu__item--explosion menu__item--close">
                         <a class="menu__link" href="#services">Услуги</a>
                         <ul class="popap-menu">
@@ -98,7 +99,7 @@
             </nav>
         </header>
         <main class="main">
-            <div class="main_wrapper">
+            <div class="main_wrapper abouts">
                 <section class="section about" id="about">
                     <div class="about__title">
                         <h1 class="about__header"><span class="about__header--left">Ольга</span> <span class="about__header--right">Фадеева</span></h1>
@@ -115,24 +116,36 @@
                         <p>Потом мне показалось этого мало, я решила, что мой голос должны услышать как можно больше слушателей и мне в голову пришла «гениальная» как мне тогда казалось идея! Каждый день, приходя домой после школы, я брала расческу, включала свои любимые песни на музыкальном центре, делала громкость колонок на максимум и орала, ой, простите, пела, что было силы!</p>
                         <a class="about__link" href="about">Читать далее</a>
                     </div>
-                    <div class="services__wrapper">
-                        <ul class="services__list">
-                            <li class="services__item">
+                    <div class="services__wrapper swiper-container">
+                        <ul class="services__list swiper-wrapper">
+                            <li class="services__item swiper-slide">
                                 <h3 class="services__title"><a href="wedding">Свадьбы</a></h3>
+                                <img class="services__img" src="img/Om74XR7ODX0.jpg" alt="Свадьбы">
+                                <a class="button" href="wedding">Подробнее</a>
                             </li>
-                            <li class="services__item">
+                            <li class="services__item swiper-slide">
                                 <h3 class="services__title"><a href="birthday">Юбилеи и Дни Рождения</a></h3>
+                                <img class="services__img" src="img/210.jpg" alt="Юбилеи и Дни Рождения">
+                                <a class="button" href="birthday">Подробнее</a>
                             </li>
-                            <li class="services__item">
+                            <li class="services__item swiper-slide">
                                 <h3 class="services__title"><a href="corporative">Корпоративные праздники</a></h3>
+                                <img class="services__img" src="img/8V0A7661.jpg" alt="Корпоративные праздники">
+                                <a class="button" href="corporative">Подробнее</a>
                             </li>
-                            <li class="services__item">
+                            <li class="services__item swiper-slide">
                                 <h3 class="services__title"><a href="vypusknoy">Выпускные</a></h3>
+                                <img class="services__img" src="img/1.jpg" alt="Выпускные">
+                                <a class="button" href="vypusknoy">Подробнее</a>
                             </li>
-                            <li class="services__item">
+                            <li class="services__item swiper-slide">
                                 <h3 class="services__title"><a href="promo">Рекламные акции</a></h3>
+                                <img class="services__img" src="img/VEZCojzIwv0.jpg" alt="Рекламные акции">
+                                <a class="button" href="promo">Подробнее</a>
                             </li>
                         </ul>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
                 </section>
                 <section class="section" id="gallery">
@@ -144,6 +157,27 @@
                 </section>
                 <section class="section" id="reviews">
                     <div id="reviews__slider" class="slider">
+                      <div class="item reviews-item">
+                            <img class="reviews__image" src="img/irina-zabaraychnaya.jpg" alt="Ирина Забайрачная">
+                            <h3>Ирина Забайрачная</h3>
+                            <div class="reviews__text">
+                                <p>Оля. Привет. Руки и ноги не доходят тебе написать. Спасибо огромное за вечер. У тебя была очень большая задача из такой сборной солянки как мои гости совместить все, но ты справилась на все 100%. Твоя позитивная энергетика наполнила весь зал весельем. Очень многие попросили твои контакты, гости говорят, что мой юбилей был даже круче некоторых свадебных пиршеств. Особое спасибо хочу сказать твоему диджею, его великолепный голос покарил наших девушек. А умение незаметно менять музыку, когда видит затишье в зале, это супер. Спасибо Ольчик. Это был самый весёлый и незабываемый юбилей!</p>
+                            </div>
+                        </div>
+                        <div class="item reviews-item">
+                            <img class="reviews__image" src="img/Ksenia-green.jpg" alt="Ксения Грин">
+                            <h3>Ксения Грин</h3>
+                            <div class="reviews__text">
+                                <p>Олечка, прости, что снова поздно!)</p>
+                                <p>На самом деле нам очень все понравилось, свадьба пролетела как мгновение, сейчас ждём видео чтобы хоть с настольгией все вспоминать.</p>
+                                <p>Мне очень нравится как ты говоришь душещипательные тосты для нас, для родителей и для гостей.  В душе осталось очень много милых и добрых слов. На самом деле не ожидали что так классно получится с танцем у Никиты, но он зажёг круто и Лёша конечно растерялся, но тоже классно "спел" такие акценты нужны и хорошо что это было, эти видео есть в телефоне и мы постоянно их смотрим.</p>
+                                <p>Был момент, каких то вопросов, которые ты задавала и нам показалось, что они лишние (у гостей), но честно мы пытались вспомнить и так и не вспомнили, что это было, видимо не так сильно нас это задело. Можем конкретно сказать, когда получим видео.</p>
+                                <p>Нам очень понравилось, что при подготовке к свадьбе ты нам дала конкретный список подарков и нам не нужно было сильно при подготовке к такому событию ещё волноваться и думать, а что же подарить, да мы что то поменяли, но в целом было понимание.</p>
+                                <p>Очень зашла идея со сладкой свадьбой и сладкой парой, прям вообще, никто сложностей и даже непониманий не было, сразу как то легко и понятно стало после первой встречи с тобой.</p>
+                                <p>Я визжу от восторга от идеи бросания игрушек и мешка холостяка, особенно от игрушек, столько положительных моментов, у меня одна пара подошла, (которая поймала слона) сказали что назовут слоника Аулинг и это будет первой игрушкой их будущего пупса, на самом деле до дрожи мило. А лучшая подруга уже шлёт фото как моя крестница играет с полученным мишкой. На ловле мешка холостяка все тоже боролись как мы и хотели.</p>
+                                <p>На самом деле, спасибо тебе, мы счастливы, что ты была с нами.</p>
+                            </div>
+                        </div>
                         <div class="item reviews-item">
                             <img class="reviews__image" src="img/1.anna-beliaeva.jpg" alt="Анна Беляева">
                             <h3>Анна Беляева</h3>
@@ -340,6 +374,7 @@
                 <section class="section" id="team">
                     <div class="team__wrapper">
                       <h2>Моя команда</h2>
+                      <p class="team__photo"><img src="img/team-photo.png" alt="Моя команда"></p>
                       <a class="button button--team" href="team.html">Хочу посмотреть на лучшую команду!</a>
                     </div>
                 </section>
@@ -375,12 +410,15 @@
                     </div>
                 </section>
             </div>
+            <div class="mouse-up"></div>
             <div class="mouse"></div>
         </main>
         <script src="js/jquery-1.9.1.js"></script>
         <script src="js/TweenMax.min.js"></script>
         <script src="js/jquery.maskedinput.min.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/swiper.min.js"></script>
+        <script src="js/swiper-slider.js"></script>
         <script src="js/front.js"></script>
         <script src="js/popaps.js"></script>
     </body>

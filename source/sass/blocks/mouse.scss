@@ -1,0 +1,95 @@
+.mouse, .mouse-up {
+  width: 25px;
+  height: 40px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 3px 3px rgba(#000, 0.3);
+  border-radius: 60px;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -25px;
+  animation: down 3s infinite;
+  &::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 1;
+    animation: wheel 2s infinite;
+  }
+}
+
+.mouse-up {
+  bottom: auto;
+  top: 100px;
+  animation: up 3s infinite;
+
+  &::before {
+    top: auto;
+    bottom: 10px;
+    animation: wheel-up 2s infinite;
+  }
+}
+
+.main_wrapper.contacts ~ .mouse {
+    display: none;
+}
+
+.main_wrapper.about ~ .mouse-up {
+    display: none;
+}
+
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 30px;
+  }
+}
+
+@keyframes wheel-up {
+  to {
+    opacity: 0;
+    bottom: 30px;
+  }
+}
+
+@keyframes down {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translateY(15px);
+  }
+  40% {
+    transform: translate(0);
+  }
+}
+
+@keyframes up {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translateY(-15px);
+  }
+  40% {
+    transform: translate(0);
+  }
+}
+
+@media (max-width: 1370px) {
+  .mouse-up {
+    top: 150px;
+  }
+}
+
+@media (max-width: 992px) {
+  .mouse, .mouse-up {
+    display: none;
+  }
+}

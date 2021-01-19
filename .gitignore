@@ -11,7 +11,7 @@
 *.sublime*
 *.js
 *.json
-source/
+
 node_modules/
 npm-debug.*
 Thumbs.db

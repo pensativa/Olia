@@ -1,0 +1,153 @@
+.other-page {
+    max-width: 1300px;
+    margin: 150px auto 0;
+    min-height: calc(100vh - 175px - 76px);
+
+    & h1 {
+      text-align: center;
+      margin: 50px 0;
+      font-size: 4vw;
+      font-family: "Franklin Gothic Medium";
+    }
+
+    & .other-page__subtitle {
+      text-align: center;
+      margin: 50px 0;
+      font-size: 2.5vw;
+      font-family: "Franklin Gothic Medium";
+      text-transform: uppercase;
+    }
+}
+
+.other-page__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.other-page__item {
+  max-width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.other-page__img {
+  margin-right: 30px;
+
+  & img {
+    width: auto;
+    height: 400px;
+    margin-right: 10px;
+  }
+
+  &--one img {
+    width: 600px;
+    height: auto;
+  }
+
+  & img:hover,
+  & img:focus {
+    transform: scale(1.5);
+    transition: 1s;
+  }
+}
+
+.other-page__text {
+  width: 500px;
+  margin-bottom: 50px;
+
+  & sup {
+    font-size: 20px;
+    font-weight: bold;
+    top: 0em;
+  }
+}
+
+.other-page__title {
+  padding: 20px 0;
+  font-size: 28px;
+  text-align: center;
+  border-bottom: 3px solid #000;
+  text-transform: uppercase;
+  font-family: "Franklin Gothic Medium";
+}
+
+.small-letters {
+  text-transform: lowercase;
+}
+
+.other-page__propose li {
+  list-style: none;
+  margin-bottom: 10px;
+
+  &::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .other-page {
+    padding: 0 20px;
+  }
+
+  .other-page__text,
+  .other-page__img {
+    width: 45%;
+  }
+
+  .other-page__img img {
+    width: 47%;
+    height: auto;
+    vertical-align: middle;
+  }
+
+  .other-page__img--one img {
+    width: 95%;
+    height: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .other-page {
+    margin-top: 0;
+
+    & h1 {
+      font-size: 30px;
+    }
+
+    & .other-page__subtitle {
+      font-size: 26px;
+    }
+  }
+
+  .other-page__item {
+    justify-content: space-around;
+  }
+
+  .other-page__text,
+  .other-page__img {
+    width: 100%;
+  }
+
+  .other-page__title {
+    font-size: 20px;
+  }
+
+  .other-page__img {
+    text-align: center;
+    margin-right: 0;
+
+    & img {
+      margin: 1%;
+    }
+  }
+}

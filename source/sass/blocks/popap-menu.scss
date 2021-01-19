@@ -1,0 +1,67 @@
+.popap-menu {
+  position: absolute;
+  top: 60px;
+  left: -50px;
+  background-color: rgb(8, 8, 8);
+  box-shadow: 3px 3px 18px 0px rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  width: 330px;
+  border-radius: 20px;
+  opacity: 0;
+  height: 0;
+  display: none;
+}
+
+.popap-menu::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -15px;
+  left: 60px;
+  background-color: rgb(8, 8, 8);
+  box-shadow: 3px 3px 18px 0px rgba(255, 255, 255, 0.2);
+  transform: rotate(-45deg);
+  clip: rect(5px, auto, auto, 5px);
+}
+
+
+.popap-menu__item {
+  padding: 10px 20px;
+  list-style: none;
+}
+
+.popap-menu__link {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $hover-color;
+    transition: 0.5s;
+  }
+}
+
+@media (max-width: 992px) {
+  .popap-menu {
+    position: static;
+    opacity: 1;
+    width: 100%;
+    display: block;
+    padding-top: 20px;
+    display: none;
+    box-shadow: none;
+  }
+
+  .popap-menu::before {
+    display: none;
+    box-shadow: none;
+  }
+
+  .popap-menu__item {
+    border-bottom: 1px solid #fff;
+    width: 100%;
+  }
+}
